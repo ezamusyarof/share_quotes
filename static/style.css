@@ -1,0 +1,174 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+body .top-layer {
+    width: 80%;
+    position: fixed;
+    height: 100px;
+    margin: 0px 10%;
+}
+body .top-layer .logo {
+    margin-top: -240px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+body .top-layer .logo .bg-header {
+    width: 100%;
+    position: fixed;
+    height: 120px;
+    margin-top: -60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+}
+body .top-layer .logo img {
+    margin-top: -30px;
+    width: 240px;
+    z-index: 3;
+}
+body .top-layer .box-input {
+    display: flex;
+    justify-content: justify;
+    width: 500px;
+}
+body .top-layer .form-quote {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+}
+body .content {
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+}
+body .content .quotes-box {
+    margin-top: -200px;
+    margin-bottom: 100px;
+    width: 85%;
+}
+body .content .quotes-box .box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px auto;
+}
+body .content .quotes-box .box .quote-text {
+    text-align: justify;
+    width: 85%;
+    margin: 0px 40px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+body .content .quotes-box .box .foot-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+body .content .quotes-box .box .your-name {
+    margin: 20px 0px;
+    width: 80%;
+    font-family: 'PecitaBook';
+    font-size: 150%;
+}
+body .content .quotes-box .box .total-like {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: -20px;
+    font-size: 30px;
+    font-family: 'Damion';
+}
+body .content .quotes-box .box .like-btn {
+    cursor: pointer;
+}
+body .content .quotes-box .box .like-btn img {
+    margin: 20px 20px;
+    width: 24px;
+    cursor: pointer;
+}
+
+body .content .quotes-box .box .like-btn [id^="like-btn-red-"] {
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+body .content .quotes-box .box .like-btn [id^="like-btn-wh-"] {
+    z-index: 9;
+    cursor: pointer;
+}
+
+body .content .box-form {
+  position: fixed;
+  bottom: 40px;
+  font-size: 18px;  
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+  width: 71%;
+}
+
+body .content .box-form-open {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    font-size: 18px;  
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    width: 71%;
+}
+
+body .content .box-form-open h1 {
+    font-size: 30px;
+}
+
+body .content .box-form-open .form-quote-text {
+    width: 80%;
+    padding: 20px 10px;
+    margin: 10px 0px;
+}
+
+body .content .box-form-open div {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 20px 8%;
+    background-color: antiquewhite;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body .content .box-form-open .share-btn {
+    background-color: rgb(69, 155, 69);
+    color: white;
+}
+
+body .content .box-form-open .cancel-btn {
+    background-color: rgb(231, 69, 69);
+    color: white;
+}
+
+@media screen and (min-width: 1000px) {
+    body .content .quotes-box .box {
+        width: 600px;
+    }
+    body .content .quotes-box .box .total-like {
+        margin-left: -40px;
+    }
+    body .content .box-form {
+        width: 470px;
+    }
+    body .content .box-form-open {
+        width: 470px;
+    }
+}
+

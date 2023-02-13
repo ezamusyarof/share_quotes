@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pecita" type="text/css"/>    
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Share Quotes</title>
+</head>
+<body>
+    <script>load_data()</script>
+    <div class="top-layer">
+        <div class="logo">
+            <div class="bg-header"></div>
+            <img src="{{url_for('static', filename='img-share-quotes-logo.png')}}" alt="logo-our-quotes">
+        </div>        
+    </div>
+    <div class="content">
+        <div class="quotes-box">
+            {% for item in data %}
+            <div class="box">
+                <div class="quote-text">
+                    <p>{{ data[item]['quote'] }}</p>
+                </div>
+                <div class="foot-box">
+                    <div class="your-name"><u>{{ data[item]['name'] }}</u></div>
+                    <div class="like-btn">
+                        <img src="{{url_for('static', filename='img-like-btn.png')}}" id="like-btn-wh-{{item}}" alt="like-btn-wh-{{item}}" onclick="like('{{item}}')">
+                        <img src="{{url_for('static', filename='img-like-btn-red.png')}}" id="like-btn-red-{{item}}" alt="like-btn-red-{{item}}" onclick="dislike('{{item}}')">
+                    </div>
+                    <p class="total-like" id="q-{{item}}">{{ data[item]['like'] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="box-form" onclick="openForm()">Share a Quote</div>
+        <div class="box-form-open" id="box-form-open">
+            <h1>Share a Quote</h1>
+            <input id="quote-text-input" type="text" class="form-quote-text" placeholder="Write a Quote">
+            <input id="your-name-input" type="text" class="form-quote-text" placeholder="Your Name">
+            <div type="submit" id="share-btn" class="share-btn" onclick="sendQuote()">Share</div>
+            <div id="cancel-btn" class="cancel-btn" onclick="closeForm()">Cancel</div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="https://cdn.rawgit.com/flouthoc/minAjax.js/master/minify/index.min.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='jscript.js')}}"></script>
+</html>
