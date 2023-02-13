@@ -1,6 +1,11 @@
 # Share Quotes 
 
-Share Quotes is a web for sharing quote with other people.
+__Share Quotes__ is a web for sharing quote with other people.
+
+How to install virtual environtment :
+```
+pip install -r requirements.txt
+```
 
 How to run api :
 ```
