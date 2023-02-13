@@ -17,3 +17,6 @@ How to run web :
 ```
 python app.py
 ```
+
+
+Thanks  :feather:
